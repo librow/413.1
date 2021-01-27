@@ -1,19 +1,21 @@
-﻿//Grade Weights - global
+﻿//the default of the $ (or JQuery.) is document.getElementById
+
+//Grade Weights - global
 var ASSIGNMENT_WEIGHT = .5;
 var GPROJECT_WEIGHT = .1;
 var QUIZ_WEIGHT = .1;
 var EXAM_WEIGHT = .2;
 var INTEX_WEIGHT = .1;
 
-var submit = document.getElementById("submitButton");
-
-submit.addEventListener("click", function () {
+//Jquery magic from videos
+// var submit = $("submitButton");
+$("#submitButton").click( function () {
     //calculating grade percentage
-    var percentage = ((document.getElementById("assignments").value * ASSIGNMENT_WEIGHT) +
-        (document.getElementById("groupproject").value * GPROJECT_WEIGHT) +
-        (document.getElementById("quizzes").value * QUIZ_WEIGHT) +
-        (document.getElementById("exams").value * EXAM_WEIGHT) +
-        (document.getElementById("intex").value * INTEX_WEIGHT)).toFixed(2);
+    var percentage = (($("#assignments").val() * ASSIGNMENT_WEIGHT) +
+        ($("#groupproject").val() * GPROJECT_WEIGHT) +
+        ($("#quizzes").val() * QUIZ_WEIGHT) +
+        ($("#exams").val() * EXAM_WEIGHT) +
+        ($("#intex").val() * INTEX_WEIGHT)).toFixed(2);
 
     //evaluating letter grade
     var grade = "";

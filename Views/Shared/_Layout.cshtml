@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Lilia Brown";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" type="~/image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+    <link href="~/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>@ViewBag.Title</h1>
+        <!--Navigation Links-->
+        <menu>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="Grades">Grades</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    @RenderBody()   <!--Brings in the body's from the other pages-->
+
+    <footer>Lilia Brown, IS413 Assignment 2</footer>
+
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>    <!--brings in jquery-->
+    <script src="~/js/gradecalculator.js"></script> <!--references my grade calculator javascript-->
+
+</body>
+</html>
